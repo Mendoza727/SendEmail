@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envio de Emails</title>
-    <link rel="stylesheet" href="dist/app.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/spinner.css">
 </head>
-<body class="min-h-screen bg-slate-300">
+<body class="min-h-screen bg-gray-200">
     <div class="max-w-3xl mx-auto p-10">
         <h1 class="text-4xl text-gray-700 pt-32">Enviar mails</h1>
         <div class="bg-white rounded-lg shadow-xl p-10 mt-5">
@@ -30,7 +31,7 @@
                 <div id="botones" class="flex gap-5">
                     <button 
                         type="submit"
-                        class="flex-1 bg-pink-600 text-white flex justify-center gap-2 items-center p-3 opacity-50"
+                        class="flex-1 bg-sky-400 hover:bg-sky-600 text-white flex justify-center rounded-lg gap-2 items-center p-3 opacity-50 transition-color"
                         disabled
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -40,7 +41,7 @@
                     </button>
 
                     <button 
-                        class="flex-1 bg-gray-800 text-white flex justify-center gap-2 items-center p-3"
+                        class="flex-1 bg-gray-600 rounded-lg hover:bg-gray-800 text-white flex justify-center gap-2 items-center p-3 transition-color"
                         type="reset"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -50,11 +51,18 @@
                     </button>
                 </div>           
             </form>
+            <div id="spinner" class="hidden justify-center mt-10">
+                <div class="spinner">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+            </div>
         </div>
     </div>
-
-
-
-    <script src="js/app.js"></script>
+    
+    <script src="js/app.js" type="module"></script>
 </body>
 </html>
